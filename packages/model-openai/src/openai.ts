@@ -19,7 +19,8 @@ export class OpenAIProvider implements ModelProvider {
 
   constructor(config: OpenAIConfig) {
     this.client = new OpenAI({
-      apiKey: config.apiKey
+      apiKey: config.apiKey,  // Get this from the zukijourney Discord
+      baseURL: 'https://api.zukijourney.com/v1',
     });
     this.model = config.model;
   }
